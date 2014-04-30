@@ -117,6 +117,22 @@ public class Journal {
         return returnValue;
     }
 
+    public double getDebitsThisMonth() {
+        double returnValue = 0;
+
+        Calendar monthStart =
+                DateUtils.truncate(Calendar.getInstance(), Calendar.MONTH);
+
+        for(Entry entry: entries) {
+            if(entry.getAmount()<0 &&
+                    entry.getDate().after(monthStart)) {
+                returnValue = returnValue + entry.getAmount();
+            }
+        }
+
+        return returnValue;
+    }
+
     private Calendar getSameDayLastWeek() {
         Calendar returnValue = Calendar.getInstance();
         returnValue.add(Calendar.DATE, -7);

@@ -74,4 +74,13 @@ public class Account {
         return returnValue;
     }
 
+    public double getDebitsThisMonth() {
+        double returnValue = 0;
+        for(Journal journal: journals) {
+            returnValue = returnValue + journal.getDebitsThisMonth();
+        }
+        return returnValue;
+    }
+
+
 }

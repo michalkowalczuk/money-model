@@ -25,9 +25,6 @@ public class App {
 
             for(int j=0; j<2; j++) {
 
-
-
-
                 double amount =
                         new Random().nextInt(50);
 
@@ -51,6 +48,7 @@ public class App {
         System.out.println("same day last week: " + someAccount.getDebitsSameDayLastWeek());
         System.out.println("same day last week (avr): " + someAccount.getAverageDebitsSameDayLastWeek());
 
+        System.out.println("this month: " + someAccount.getDebitsThisMonth());
 
     }
 
