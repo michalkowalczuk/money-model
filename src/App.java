@@ -35,6 +35,10 @@ public class App {
         }
 
 
+
+        
+
+
         Account someAccount = Account.newInstance();
 
         someAccount.addJournal(journal);
