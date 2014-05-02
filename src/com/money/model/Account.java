@@ -1,13 +1,16 @@
-package model;
+package com.money.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by michal on 30/04/14.
  */
 public class Account {
+
+    private String id;
 
     private List<Journal> journals;
 
@@ -16,6 +19,7 @@ public class Account {
     public static Account newInstance() {
         Account returnValue = new Account();
         returnValue.journals = new ArrayList<Journal>();
+        returnValue.id = UUID.randomUUID().toString();
         return returnValue;
     }
 
@@ -82,5 +86,7 @@ public class Account {
         return returnValue;
     }
 
-
+    public String getId() {
+        return id;
+    }
 }

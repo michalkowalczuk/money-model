@@ -1,6 +1,6 @@
-import model.Account;
-import model.Entry;
-import model.Journal;
+import com.money.model.Account;
+import com.money.model.Entry;
+import com.money.model.Journal;
 
 import java.util.Calendar;
 import java.util.Random;
